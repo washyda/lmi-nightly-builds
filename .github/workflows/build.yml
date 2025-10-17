@@ -1,4 +1,4 @@
-name: Build images
+name: Build lmi image
 on:
   push:
   workflow_dispatch:
