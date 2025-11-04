@@ -58,6 +58,9 @@ jobs:
       - name: Build xiaomi-lmi
         run: |
           cp xiaomi-lmi.cfg ~/.config/pmbootstrap_v3.cfg
+          pmbootstrap config mirrors.alpine https://mirrors.tuna.tsinghua.edu.cn/alpine/
+          pmbootstrap config mirrors.pmaports https://mirrors.tuna.tsinghua.edu.cn/postmarketOS/
+          pmbootstrap config mirrors.systemd https://mirrors.tuna.tsinghua.edu.cn/postmarketOS/extra-repos/systemd/
           pmbootstrap install --password 147147
           pmbootstrap export
           cp /tmp/postmarketOS-export/boot.img out/boot-xiaomi-lmi.img
