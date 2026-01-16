@@ -62,6 +62,7 @@ jobs:
           pmbootstrap config mirrors.pmaports https://mirrors.tuna.tsinghua.edu.cn/postmarketOS/
           pmbootstrap config mirrors.systemd https://mirrors.tuna.tsinghua.edu.cn/postmarketOS/extra-repos/systemd/
           pmbootstrap install --password 147147
+          pmbootstrap chroot --rootfs -- rc-update add networkmanager default
           pmbootstrap export
           cp /tmp/postmarketOS-export/boot.img out/boot-xiaomi-lmi.img
           cp /tmp/postmarketOS-export/xiaomi-lmi.img out/rootfs-xiaomi-lmi.img
